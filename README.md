@@ -5,7 +5,7 @@
   <h1 align="center">gofor</h1>
 
   <p align="center">
-    gofor is the successor of goPage.
+    a simple browser homepage.
     <br />
     <a href="https://gofor.mmmarco.de/"><strong>Use now »</strong></a>
     <br />
