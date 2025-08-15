@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --light-background: #f0f0f0;
+  --light-text-color: #333333;
+  --light-button-border: #999999;
+  --light-input-border: #cccccc;
+  --light-link-color: #0066cc;
+  --light-notice-background: rgba(0, 0, 0, 0.05);
+  --light-slash-color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  background-color: var(--light-background);
+  color: var(--light-text-color);
+  margin: 15%;
+  margin-top: 10%;
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/*
+ * Combined styles for buttons and inputs to ensure a consistent design.
+ * All properties, including font, padding, border, and color, are the same.
+ */
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],
+input[type="email"],
+input[type="search"] {
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border: 2px solid var(--light-button-border);
+  border-radius: 25px;
+  background-color: transparent;
+  color: var(--light-text-color);
+  cursor: pointer;
+  font-family: inherit;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Add a subtle hover effect */
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="search"]:hover {
+    background-color: var(--light-notice-background);
+}
+
+/* Add a black outline for keyboard focus */
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible,
+input[type="button"]:focus-visible,
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="search"]:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 2px;
+}
+
+/* Textarea styles have been updated for visual consistency */
+textarea {
+  font-size: 2rem;
+  background-color: white;
+  color: var(--light-text-color);
+  border: 2px solid var(--light-button-border); /* Matched button border */
+  border-radius: 25px; /* Matched button radius */
+  width: 25%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--light-link-color) !important;
+  text-decoration: none;
+}
+
+#info {
+  font-size: 1rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+p img,
+span img,
+li img,
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img {
+  height: 1em;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+mark {
+  padding: 2px 5px;
+  border-radius: 10px;
+  background-color: var(--light-text-color);
+  color: white;
+}
+
+kbd {
+  color: var(--light-text-color);
+  border: var(--light-text-color) solid 0.5px;
+  border-bottom: 3px solid var(--light-text-color);
+  border-radius: 10px;
+  padding: 0.1rem 0.4rem 0.1rem 0.1rem;
+}
+
+.notice {
+  background: var(--light-notice-background);
+  border: 2px solid var(--light-input-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.slash {
+  color: var(--light-slash-color);
+  font-size: 5rem;
+}
+
+@media (max-width: 1200px) {
+  body {
+    margin: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.5rem;
+    margin: 5%;
+  }
+
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  input[type="text"],
+  input[type="email"],
+  input[type="search"] {
+    font-size: 1.5rem;
+    padding: 0.8rem 0.8rem;
+    width: auto; /* Allow auto-sizing on mobile */
+  }
+
+  .slash {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.2rem;
+    margin: 5%;
+  }
+
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  input[type="text"],
+  input[type="email"],
+  input[type="search"] {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.6rem;
+    width: auto; /* Allow auto-sizing on mobile */
+  }
+
+  .slash {
+    font-size: 2rem;
+  }
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.search-results li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+.search-results li:last-child {
+  border-bottom: none;
+}
+.search-results li a {
+  color: var(--light-link-color) !important;
+  text-decoration: none;
+}
+.search-results li a:hover {
+  text-decoration: underline;
+}
+.search-results li p {
+  margin-top: 0.375rem;
+}
+.no-results {
+  padding: 1rem;
+  font-style: italic;
+  display: none;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+details {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+summary {
+  font-weight: normal;
+  font-size: inherit;
+  color: var(--light-text-color);
+  padding: 0 0 0.5rem 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: '\2193';
+  position: relative;
+  right: auto;
+  top: auto;
+  transform: none;
+  margin-left: 0.5rem;
+  font-size: inherit;
+  color: var(--light-text-color);
+}
+
+details[open] summary::after {
+  content: '\2191';
+}
+
+details[open] > :not(summary) {
+  padding: 1.5rem;
+  background-color: var(--light-notice-background);
+  border: 2px solid var(--light-input-border);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  summary {
+    font-size: 1.5rem;
+    padding: 0.8rem 0.8rem 0.8rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  summary {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.6rem 0.6rem 0;
+  }
+}
