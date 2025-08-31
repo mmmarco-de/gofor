@@ -1,0 +1,41 @@
+{
+  "actionButtons": {
+    "loadNpmCommands": false, // Set to true if you want to use npm scripts
+    "reloadButton": null,
+    "commands": [
+      {
+        "name": "🌈 Prettify",
+        "singleInstance": true,
+        "useVsCodeApi": true,
+        "command": "editor.action.formatDocument",
+        "tooltip": "Tidy up your code"
+      },
+      {
+        "name": "💻 Terminal",
+        "singleInstance": true,
+        "useVsCodeApi": true,
+        "command": "workbench.action.terminal.toggleTerminal",
+        "tooltip": "Open a terminal"
+      },
+      {
+        "name": "🧪 START",
+        "singleInstance": true,
+        "useVsCodeApi": true,
+        "command": "extension.liveServer.goOnline",
+        "tooltip": "Starts the development server for this project"
+      },
+      {
+        "name": "STOP",
+        "singleInstance": true,
+        "useVsCodeApi": true,
+        "command": "extension.liveServer.goOffline",
+        "tooltip": "Stops the development server for this project"
+      },
+      {
+        "name": "🚀 Publish",
+        "command": "sh helpers/push.sh",
+        "tooltip": "Pushes this project to main/origin"
+      }
+    ]
+  }
+}
