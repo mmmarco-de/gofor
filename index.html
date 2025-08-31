@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -8,6 +8,7 @@
     <title>gofor</title>
     <link rel="stylesheet" href="/public/style.css" />
     <link rel="icon" type="image/png" href="/public/media/logo.png" />
+    <link rel="manifest" href="/public/manifest.json" />
   </head>
 
   <body>
@@ -16,54 +17,169 @@
     </header>
 
     <main>
-      <h1>
-        <img src="/public/media/hand.svg" alt="Waving Hand Sign" /> Hey! This is
-        gofor
-      </h1>
-
-      <h4>I prefer searching with ...</h4>
-      <p>
-        <a href="/priv/" tabindex="-1"
-          ><button>
-            <img src="/public/media/privacy.svg" alt="Privacy Lock Icon" />
-            Privacy
-          </button></a
-        >
-        &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
-        <a href="/ai/" tabindex="-1"
-          ><button>
-            <img src="/public/media/perplexity.svg" alt="Perplexity AI Logo" />
-            AI
-          </button></a
-        >
-      </p>
-
-      <br /><br /><br />
-      <br /><br /><br />
-      <br /><br /><br />
-      <hr />
-      <details>
-        <summary>Menu</summary>
+      <div id="home-page" class="page">
+        <h1>
+          <img src="/public/media/hand.svg" alt="Waving Hand Sign" /> Hey! This
+          is gofor
+        </h1>
+        <h4>I prefer searching with ...</h4>
         <p>
-          <a href="/about.html"
-            ><img src="/public/media/info.svg" alt="Info Circle Icon" /> About
-            gofor</a
-          ><br />
-          <a href="/sponsor.html"
-            ><img src="/public/media/money.svg" alt="Dollar Icon" /> Sponsor the
-            project</a
-          ><br />
-          <a href="/priv/index.html"
-            ><img src="/public/media/privacy.svg" alt="Privacy Lock Icon" />
-            gofor Privacy Search</a
-          ><br /><a href="/ai/index.html"
-            ><img src="/public/media/perplexity.svg" alt="Perplexity AI Logo" />
-            gofor AI Search</a
+          <a data-path="privacy-page" href="#priv"
+            ><button>
+              <img src="/public/media/privacy.svg" alt="Privacy Lock Icon" />
+              Privacy
+            </button></a
+          >
+          &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+          <a data-path="ai-page" href="#ai"
+            ><button>
+              <img
+                src="/public/media/perplexity.svg"
+                alt="Perplexity AI Logo"
+              />
+              AI
+            </button></a
           >
         </p>
-      </details>
-      <hr />
-      <small> Made with love in Germany. </small>
+
+        <br /><br /><br />
+        <br /><br /><br />
+        <br /><br /><br />
+        <hr />
+        <details>
+          <summary>Menu</summary>
+          <p>
+            <a data-path="about-page" href="#about"
+              ><img src="/public/media/info.svg" alt="Info Circle Icon" /> About
+              gofor</a
+            ><br />
+            <a data-path="sponsor-page" href="#sponsor"
+              ><img src="/public/media/money.svg" alt="Dollar Icon" /> Sponsor
+              the project</a
+            ><br />
+            <a data-path="privacy-page" href="#priv"
+              ><img src="/public/media/privacy.svg" alt="Privacy Lock Icon" />
+              gofor Privacy Search</a
+            ><br /><a data-path="ai-page" href="#ai"
+              ><img
+                src="/public/media/perplexity.svg"
+                alt="Perplexity AI Logo"
+              />
+              gofor AI Search</a
+            >
+          </p>
+        </details>
+        <hr />
+        <small> Made with love in Germany. </small>
+      </div>
+
+      <div id="about-page" class="page hidden">
+        <h1>
+          <img src="/public/media/info.svg" alt="Info Circle Icon" /> About
+          gofor
+        </h1>
+        <article>
+          Built as the latest step in a long development timeline, this project
+          began with ePage (v0.1), evolved into GoPage (v1.0-2.1), and then go.3
+          (v3.0). gofor is the latest and most advanced iteration, marking
+          version 4. It's crafted with modern HTML, CSS, and JavaScript to
+          deliver a more powerful and refined experience.
+        </article>
+        <br /><br />
+        <a href="https://github.com/mmmarco-de/gofor" tabindex="-1"
+          ><button>
+            <span
+              ><img src="/public/media/code.svg" alt="Source Code Icon" />
+              Source code</span
+            >
+          </button></a
+        >
+        <a data-path="sponsor-page" href="#sponsor" tabindex="-1"
+          ><button>
+            <span
+              ><img src="/public/media/money.svg" alt="Dollar Icon" />
+              Sponsor</span
+            >
+          </button></a
+        >
+        <hr />
+        <p>
+          <a data-path="home-page" href="#home"
+            ><img src="/public/media/back.svg" alt="Back Icon" /> Return to
+            homepage</a
+          >
+        </p>
+      </div>
+
+      <div id="sponsor-page" class="page hidden">
+        <h1>
+          <img src="/public/media/money.svg" alt="Dollar Icon" /> Sponsor the
+          project "gofor"
+        </h1>
+        <p><em>You wan't to sponsor this project? No problem!</em></p>
+        <h4>Some suggested donations:</h4>
+        <br />
+        <a href="https://ko-fi.com/mmmarcode/5" tabindex="-1">
+          <button>Basic (5€)</button>
+        </a>
+        <a href="https://ko-fi.com/mmmarcode/15" tabindex="-1">
+          <button>Plus (15€)</button>
+        </a>
+        <p>
+          Base on a honor system: Suggested donation is 5€ for small and basic
+          personal use, or 15€ if you use it much or as a company.
+        </p>
+        <hr />
+        <p>
+          <a data-path="home-page" href="#home"
+            ><img src="/public/media/back.svg" alt="Back Icon" /> Return to
+            homepage</a
+          >
+        </p>
+      </div>
+
+      <div id="privacy-page" class="page hidden">
+        <h1>
+          <img src="/public/media/privacy.svg" alt="Privacy Lock Icon" /> gofor
+          Search
+        </h1>
+        <small>
+          Using DuckDuckGo - The search engine that doesn't quack your data.
+        </small>
+        <br /><br />
+        <div class="group">
+          <input type="text" id="priv-inp" />
+          <button id="priv-search">Search</button>
+        </div>
+        <hr />
+        <p>
+          <a data-path="home-page" href="#home"
+            ><img src="/public/media/back.svg" alt="Back Icon" /> Return to
+            homepage</a
+          >
+        </p>
+      </div>
+
+      <div id="ai-page" class="page hidden">
+        <h1>
+          <img src="/public/media/perplexity.svg" alt="Perplexity AI Logo" />
+          gofor AI Search
+        </h1>
+        <small>Using Perplexity - Don't get perplexed by slow searches.</small>
+        <br /><br />
+        <div class="group">
+          <input type="text" id="ai-inp" />
+          <button id="ai-search">Search</button>
+        </div>
+        <hr />
+        <p>
+          <a data-path="home-page" href="#home"
+            ><img src="/public/media/back.svg" alt="Back Icon" /> Return to
+            homepage</a
+          >
+        </p>
+      </div>
     </main>
+    <script src="/public/app.js"></script>
   </body>
 </html>

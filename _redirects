@@ -1,9 +1,15 @@
-/ddg /priv/
-/privacy /priv/
-/perplexity /ai/
-/perplexity-ai /ai/
+/ddg /#priv
+/privacy /#priv
+/priv /#priv
 
-/about /about.html
-/sponsor /sponsor.html
+/perplexity /#ai
+/perplexity-ai /#ai
+/ai /#ai
+
+/about /#about
+/about.html /#about
+
+/sponsor /#sponsor
+/sponsor.html /#sponsor
 
 /* /404.html 404

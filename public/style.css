@@ -292,3 +292,7 @@ details[open] > :not(summary) {
     padding: 0.6rem 0.6rem 0.6rem 0;
   }
 }
+
+.hidden {
+  display: none;
+}
